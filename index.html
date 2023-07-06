@@ -5,35 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Landing</title>
     <link rel="stylesheet" href="./css/fonts.css">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;500;600&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body class="body">
 <header class="header">
-    <div class="wrapper">
-        <div class="image-box">
-            <img src="./images/logo-sub.png" alt="site logo">
+    <div class="header__container">
+        <div class="header__logo-wrap">
+            <img class="header__logo" src="./images/logo-sub.png" alt="site logo">
         </div>
-        <nav class="navigation">
-            <ul class="menu">
-                <li class="item">
-                    <a href="#" class="link">What we do</a>
+        <nav class="header__navigation">
+            <ul class="header__menu">
+                <li class="header__item">
+                    <a href="#" class="header__link">What we do</a>
                 </li>
-                <li class="item">
-                    <a href="#" class="link">Who we are</a>
+                <li class="header__item">
+                    <a href="#" class="header__link">Who we are</a>
                 </li>
-                <li class="item">
-                    <a href="#" class="link">Contact Us</a>
+                <li class="header__item">
+                    <a href="#" class="header__link">Contact Us</a>
                 </li>
             </ul>
         </nav>
+<!--        <div class="menu">-->
+<!--            <div class="bar"></div>-->
+<!--            <div class="bar"></div>-->
+<!--            <div class="bar"></div>-->
+<!--        </div>-->
     </div>
 </header>
 
-<main>
+<main class="main">
     <section class="promo">
         <div class="promo__container">
             <div class="promo__information">
+                <div class="promo__mobile">
+                    <img src="./images/mobile-bg.png" alt="mobile img">
+                </div>
+
                 <h1 class="promo__title">Infinite Affiliates</h1>
                 <p class="promo__description">The democratization of marketing</p>
                 <button class="promo__action">Coming soon</button>
@@ -41,7 +51,7 @@
             <div class="promo__nav-elems">
                 <div class="promo__elem">
                     <div class="promo__image-box">
-                        <img src="./images/promo/elem1.png" alt="button nav">
+                        <img class="promo__elem-image" src="./images/promo/elem1.png" alt="button nav">
                     </div>
                     <div class="promo__elem-description">
                         Browse deals
@@ -99,8 +109,15 @@
         </div>
     </section>
     <section class="services">
-        <div class="services__container">
-            <div class="services__elem">
+        <div class="services__elem">
+            <div class="services__figure services__figure--rect1">
+                <img src="./images/services/block1/rect1.png" alt="rect img">
+            </div>
+            <div class="services__figure services__figure--rect2">
+                <img src="./images/services/block1/rect2.png" alt="rect img">
+            </div>
+            <div class="services__container">
+                <h3 class="services__elem-title services__elem-title--mobile">Browse deals</h3>
                 <div class="services__image-wrap">
                     <img class="services__image" src="./images/services/services1.png" alt="service image">
                 </div>
@@ -138,24 +155,87 @@
                     <input class="callback__submit" disabled type="submit" value="Send">
                 </div>
             </form>
-<!--            <form class="form2">-->
-<!--                <p>Check the social media sites you use.</p>-->
-<!--                <input type="checkbox" id="fb" name="answer1" checked value="Facebook">-->
-<!--                <label for="fb"><span></span>Facebook</label>-->
-<!--                <br>-->
-<!--                <input type="checkbox" id="tw" name="answer1" value="Twitter">-->
-<!--                <label for="tw"><span></span>Twitter</label>-->
-<!--                <br>-->
-<!--                <input type="checkbox" id="in" name="answer1" value="LinkedIn">-->
-<!--                <label for="in"><span></span>LinkedIn</label>-->
+            <!--            <form class="form2">-->
+            <!--                <p>Check the social media sites you use.</p>-->
+            <!--                <input type="checkbox" id="fb" name="answer1" checked value="Facebook">-->
+            <!--                <label for="fb"><span></span>Facebook</label>-->
+            <!--                <br>-->
+            <!--                <input type="checkbox" id="tw" name="answer1" value="Twitter">-->
+            <!--                <label for="tw"><span></span>Twitter</label>-->
+            <!--                <br>-->
+            <!--                <input type="checkbox" id="in" name="answer1" value="LinkedIn">-->
+            <!--                <label for="in"><span></span>LinkedIn</label>-->
 
-<!--                <p>Can you speak more than one language?</p>-->
-<!--                <input type="radio" id="yes" name="answer2" value="Yes">-->
-<!--                <label for="yes"><span></span>Yes</label>-->
-<!--                <br>-->
-<!--                <input type="radio" id="no" name="answer2" value="No">-->
-<!--                <label for="no"><span></span>No</label>-->
-<!--            </form>-->
+            <!--                <p>Can you speak more than one language?</p>-->
+            <!--                <input type="radio" id="yes" name="answer2" value="Yes">-->
+            <!--                <label for="yes"><span></span>Yes</label>-->
+            <!--                <br>-->
+            <!--                <input type="radio" id="no" name="answer2" value="No">-->
+            <!--                <label for="no"><span></span>No</label>-->
+            <!--            </form>-->
+        </div>
+    </section>
+    <section class="possibilities">
+        <div class="possibilities__circle-first"></div>
+        <div class="possibilities__circle"></div>
+        <div class="possibilities__container">
+           <h3 class="possibilities__title">Возможности Ed Space</h3>
+            <p class="possibilities__description">Поможем перенести корпоративную академию, базу знаний,
+                учебные курсы, настроим систему мотивации обучения, круглосуточная поддержка.</p>
+            <div class="possibilities__cards cards">
+                <div class="cards__elem">
+                    <div class="cards__image-wrap">
+                        <img class="cards__image" src="./images/possibilities/Frame1.png" alt="card image">
+                    </div>
+                    <h3 class="cards__title">Организация учебного процесса</h3>
+                    <p class="cards__description">Управляйте процессом обучения.
+                        Наблюдайте за будущими, текущими и завершенными курсами в одном окне. </p>
+                </div>
+                <div class="cards__elem">
+                    <div class="cards__image-wrap">
+                        <img class="cards__image" src="./images/possibilities/Frame2.png" alt="card image">
+                    </div>
+                    <h3 class="cards__title">Организация учебного процесса</h3>
+                    <p class="cards__description">Управляйте процессом обучения.
+                        Наблюдайте за будущими, текущими и завершенными курсами в одном окне. </p>
+                </div>
+                <div class="cards__elem">
+                    <div class="cards__image-wrap">
+                        <img class="cards__image" src="./images/possibilities/Frame3.png" alt="card image">
+                    </div>
+                    <h3 class="cards__title">Организация учебного процесса</h3>
+                    <p class="cards__description">Управляйте процессом обучения.
+                        Наблюдайте за будущими, текущими и завершенными курсами в одном окне. </p>
+                </div>
+                <div class="cards__elem">
+                    <div class="cards__image-wrap cards__image-wrap--xs">
+                        <img class="cards__image" src="./images/possibilities/Frame4.png" alt="card image">
+                    </div>
+                    <h3 class="cards__title" style="max-width: 255px">Задания для
+                        учеников</h3>
+                    <p class="cards__description" style="max-width: 260px">Каждый ученик может видеть домашние задания
+                        от преподавателя, отслеживать статус их проверки
+                        &nbsp;&nbsp;и&nbsp;&nbsp; собственный уровень прогресса
+                        &nbsp;&nbsp;в&nbsp;&nbsp; обучении. </p>
+                </div>
+                <div class="cards__elem">
+                    <div class="cards__image-wrap">
+                        <img class="cards__image" src="./images/possibilities/Frame5.png" alt="card image">
+                    </div>
+                    <h3 class="cards__title">Организация учебного процесса</h3>
+                    <p class="cards__description">Управляйте процессом обучения.
+                        Наблюдайте за будущими, текущими и завершенными курсами в одном окне. </p>
+                </div>
+                <div class="cards__elem">
+                    <div class="cards__image-wrap">
+                        <img class="cards__image" src="./images/possibilities/Frame6.png" alt="card image">
+                    </div>
+                    <h3 class="cards__title">Организация учебного процесса</h3>
+                    <p class="cards__description">Управляйте процессом обучения.
+                        Наблюдайте за будущими, текущими и завершенными курсами в одном окне. </p>
+                </div>
+            </div>
+
         </div>
     </section>
 </main>
