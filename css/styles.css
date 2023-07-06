@@ -40,6 +40,10 @@ html {
     list-style: none;
 }
 
+/*.header__item:nth-child(2n + 1) {*/
+/*    background: darkblue;*/
+/*}*/
+
 .header__item {
     margin-right: 40px;
 }
@@ -49,6 +53,7 @@ html {
 }
 
 .header__link {
+    position: relative;
     color: #002F3E;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -58,6 +63,37 @@ html {
     text-transform: capitalize;
     text-decoration: none;
 }
+
+.header__link:hover {
+    color: red;
+}
+
+/*.header__link::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: -25px;*/
+/*    transform: translateY(-50%);*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    background-image: url('../images/info.jpg');*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: contain;*/
+/*}*/
+
+/*.header__link::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    right: -25px;*/
+/*    transform: translateY(-50%);*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    background-image: url('../images/info.jpg');*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: contain;*/
+
+/*}*/
 
 .promo__container {
     max-width: 1227px;
@@ -203,10 +239,17 @@ html {
 .services__image-wrap {
     max-width: 584px;
     width: 100%;
+
 }
 
 .services__image {
     width: 100%;
+    transition: 2s all;
+}
+
+.services__image:hover {
+    filter: grayscale(100);
+    transition: 2s all;
 }
 
 .services__elem-promo {
@@ -285,6 +328,10 @@ html {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 1px;
+}
+
+.callback__field:focus {
+    border: 1px solid darkblue;
 }
 
 .callback__field:last-child {
@@ -632,4 +679,39 @@ input[type=radio]:checked + label span {
         display: block;
         font-size: 32px;
     }
+
+    .callback {
+        margin-top: 112px;
+        margin-bottom: 64px;
+    }
+
+    .callback__container {
+        padding: 24px;
+        background-image: url("../images/callback/bg-mobile.png");
+        background-size: cover;
+    }
+
+    .callback__title {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+
+    .callback__box {
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .callback__area {
+        margin-bottom: 24px;
+    }
+
+    .callback__btn-wrap {
+        margin-bottom: 43px;
+    }
+
+    .callback__field {
+        width: 100%;
+        margin: 0 0 16px 0;
+    }
+
 }
