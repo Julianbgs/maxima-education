@@ -1,0 +1,38 @@
+div:not(.wrapper) {
+    border: 1px solid royalblue;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 200px repeat(3, 300px) 200px;
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 20px;
+    row-gap: 20px;
+
+    .grid1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    &__grid2 {
+        grid-column-start: 4;
+        grid-column-end: 6;
+    }
+}
+
+.grid1 {
+
+}
+
+.grid2 {
+
+}
+
+.grid3 {
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
